@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { escapeHtml } from './escapeHtml';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
@@ -16,11 +17,18 @@ export async function sendBookingRequestEmails(booking: {
   guestPhone: string;
   checkIn: Date;
   checkOut: Date;
+  guests?: number;
   message?: string | null;
   room: { name: string };
 }) {
-  const confirmUrl = `${BASE_URL}/api/bookings/${booking.id}/confirm?token=${booking.token}`;
-  const rejectUrl = `${BASE_URL}/api/bookings/${booking.id}/reject?token=${booking.token}`;
+  const confirmUrl = `${BASE_URL}/de/admin/confirm/${booking.id}?token=${booking.token}`;
+  const rejectUrl = `${BASE_URL}/de/admin/reject/${booking.id}?token=${booking.token}`;
+
+  const safeGuestName = escapeHtml(booking.guestName);
+  const safeGuestEmail = escapeHtml(booking.guestEmail);
+  const safeGuestPhone = escapeHtml(booking.guestPhone);
+  const safeMessage = booking.message ? escapeHtml(booking.message) : null;
+  const safeRoomName = escapeHtml(booking.room.name);
 
   // Email to guest
   await resend.emails.send({
@@ -30,10 +38,10 @@ export async function sendBookingRequestEmails(booking: {
     html: `
       <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;color:#1A1A1A">
         <h1 style="color:#1C2B1E;font-size:28px">Danke für Ihre Anfrage!</h1>
-        <p>Liebe/r ${booking.guestName},</p>
+        <p>Liebe/r ${safeGuestName},</p>
         <p>wir haben Ihre Buchungsanfrage erhalten und melden uns in Kürze.</p>
         <table style="margin:24px 0;width:100%;border-collapse:collapse">
-          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px;font-weight:bold">${booking.room.name}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px;font-weight:bold">${safeRoomName}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Anreise:</td><td style="padding:8px">${formatDate(booking.checkIn)}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Abreise:</td><td style="padding:8px">${formatDate(booking.checkOut)}</td></tr>
         </table>
@@ -53,13 +61,14 @@ export async function sendBookingRequestEmails(booking: {
       <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;color:#1A1A1A">
         <h1 style="color:#1C2B1E">Neue Buchungsanfrage</h1>
         <table style="margin:24px 0;width:100%;border-collapse:collapse">
-          <tr><td style="padding:8px;color:#6B7280">Name:</td><td style="padding:8px">${booking.guestName}</td></tr>
-          <tr><td style="padding:8px;color:#6B7280">E-Mail:</td><td style="padding:8px">${booking.guestEmail}</td></tr>
-          <tr><td style="padding:8px;color:#6B7280">Telefon:</td><td style="padding:8px">${booking.guestPhone}</td></tr>
-          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px">${booking.room.name}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Name:</td><td style="padding:8px">${safeGuestName}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">E-Mail:</td><td style="padding:8px">${safeGuestEmail}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Telefon:</td><td style="padding:8px">${safeGuestPhone}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px">${safeRoomName}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Gäste:</td><td style="padding:8px">${booking.guests ?? 1}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Anreise:</td><td style="padding:8px">${formatDate(booking.checkIn)}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Abreise:</td><td style="padding:8px">${formatDate(booking.checkOut)}</td></tr>
-          ${booking.message ? `<tr><td style="padding:8px;color:#6B7280">Nachricht:</td><td style="padding:8px">${booking.message}</td></tr>` : ''}
+          ${safeMessage ? `<tr><td style="padding:8px;color:#6B7280">Nachricht:</td><td style="padding:8px">${safeMessage}</td></tr>` : ''}
         </table>
         <div style="margin:32px 0">
           <a href="${confirmUrl}" style="background:#1C2B1E;color:white;padding:16px 32px;text-decoration:none;border-radius:8px;font-weight:bold;display:inline-block">
@@ -81,6 +90,9 @@ export async function sendBookingConfirmedEmail(booking: {
   checkOut: Date;
   room: { name: string };
 }) {
+  const safeGuestName = escapeHtml(booking.guestName);
+  const safeRoomName = escapeHtml(booking.room.name);
+
   await resend.emails.send({
     from: 'Haus Stubenböck <noreply@stubenboeck-telfs.com>',
     to: booking.guestEmail,
@@ -88,10 +100,10 @@ export async function sendBookingConfirmedEmail(booking: {
     html: `
       <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;color:#1A1A1A">
         <h1 style="color:#1C2B1E">Ihre Buchung ist bestätigt!</h1>
-        <p>Liebe/r ${booking.guestName},</p>
+        <p>Liebe/r ${safeGuestName},</p>
         <p>wir freuen uns, Ihre Buchung zu bestätigen. Wir heißen Sie herzlich willkommen!</p>
         <table style="margin:24px 0;width:100%;border-collapse:collapse">
-          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px;font-weight:bold">${booking.room.name}</td></tr>
+          <tr><td style="padding:8px;color:#6B7280">Zimmer:</td><td style="padding:8px;font-weight:bold">${safeRoomName}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Anreise:</td><td style="padding:8px">${formatDate(booking.checkIn)}</td></tr>
           <tr><td style="padding:8px;color:#6B7280">Abreise:</td><td style="padding:8px">${formatDate(booking.checkOut)}</td></tr>
         </table>
@@ -111,6 +123,8 @@ export async function sendBookingRejectedEmail(booking: {
   checkOut: Date;
   room: { name: string };
 }) {
+  const safeGuestName = escapeHtml(booking.guestName);
+
   await resend.emails.send({
     from: 'Haus Stubenböck <noreply@stubenboeck-telfs.com>',
     to: booking.guestEmail,
@@ -118,7 +132,7 @@ export async function sendBookingRejectedEmail(booking: {
     html: `
       <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;color:#1A1A1A">
         <h1 style="color:#1C2B1E">Ihre Buchungsanfrage</h1>
-        <p>Liebe/r ${booking.guestName},</p>
+        <p>Liebe/r ${safeGuestName},</p>
         <p>leider müssen wir Ihre Anfrage für den gewünschten Zeitraum (${formatDate(booking.checkIn)} &ndash; ${formatDate(booking.checkOut)}) absagen, da das Zimmer in diesem Zeitraum leider bereits belegt ist.</p>
         <p>Wir würden uns freuen, Sie zu einem anderen Zeitpunkt begrüßen zu dürfen. Bitte senden Sie uns eine neue Anfrage oder kontaktieren Sie uns direkt.</p>
         <p>Mit freundlichen Grüßen,<br/>Maria Verena Stubenböck</p>

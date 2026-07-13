@@ -24,6 +24,7 @@ model Booking {
   guestName   String
   guestEmail  String
   guestPhone  String
+  guests      Int           @default(1)
   message     String?
   status      String        @default("PENDING")
   token       String        @unique

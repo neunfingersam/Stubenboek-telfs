@@ -1,9 +1,12 @@
+'use client';
 import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-export default function ConfirmPage({ searchParams }: { searchParams: { already?: string } }) {
+export default function ConfirmPage() {
   const t = useTranslations('confirm');
-  const already = searchParams.already === '1';
+  const searchParams = useSearchParams();
+  const already = searchParams.get('already') === '1';
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-cream px-4 text-center">

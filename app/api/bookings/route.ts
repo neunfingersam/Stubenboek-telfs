@@ -20,6 +20,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+    if (isNaN(checkInDate.getTime()) || isNaN(checkOutDate.getTime())) {
+      return NextResponse.json({ error: 'Invalid dates' }, { status: 400 });
+    }
+    if (checkInDate >= checkOutDate) {
+      return NextResponse.json({ error: 'Check-out must be after check-in' }, { status: 400 });
+    }
+    if (checkInDate < new Date()) {
+      return NextResponse.json({ error: 'Check-in cannot be in the past' }, { status: 400 });
+    }
+
     const booking = await createBooking({
       roomSlug,
       checkIn: new Date(checkIn),

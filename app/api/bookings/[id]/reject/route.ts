@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { sendBookingRejectedEmail } from '@/lib/email';
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+async function handleReject(request: NextRequest, id: string) {
   const token = request.nextUrl.searchParams.get('token');
   const booking = await prisma.booking.findFirst({
-    where: { id: Number(params.id), token: token ?? '' },
+    where: { id: Number(id), token: token ?? '' },
     include: { room: true },
   });
 
@@ -25,4 +25,12 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   await sendBookingRejectedEmail(booking);
 
   return NextResponse.redirect(new URL(`/de/booking/reject/${booking.token}`, request.url));
+}
+
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+  return handleReject(request, params.id);
+}
+
+export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+  return handleReject(request, params.id);
 }

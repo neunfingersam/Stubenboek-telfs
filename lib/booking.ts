@@ -53,6 +53,7 @@ export async function createBooking(data: {
       roomId: room.id,
       checkIn: data.checkIn,
       checkOut: data.checkOut,
+      guests: data.guests ?? 1,
       guestName: data.guestName,
       guestEmail: data.guestEmail,
       guestPhone: data.guestPhone,

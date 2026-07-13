@@ -104,7 +104,7 @@ export default function ContactSection() {
               </Button>
               {status === 'error' && (
                 <p className="text-center text-sm text-red-600">
-                  Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.
+                  {t('error')}
                 </p>
               )}
             </form>

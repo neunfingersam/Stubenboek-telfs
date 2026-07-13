@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { sendBookingConfirmedEmail } from '@/lib/email';
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+async function handleConfirm(request: NextRequest, id: string) {
   const token = request.nextUrl.searchParams.get('token');
   const booking = await prisma.booking.findFirst({
-    where: { id: Number(params.id), token: token ?? '' },
+    where: { id: Number(id), token: token ?? '' },
     include: { room: true },
   });
 
@@ -25,4 +25,12 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   await sendBookingConfirmedEmail(booking);
 
   return NextResponse.redirect(new URL(`/de/booking/confirm/${booking.token}`, request.url));
+}
+
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+  return handleConfirm(request, params.id);
+}
+
+export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+  return handleConfirm(request, params.id);
 }

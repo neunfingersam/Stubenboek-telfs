@@ -93,6 +93,7 @@
     "submit": "Send Request",
     "success": "Your request was sent! We will get back to you shortly.",
     "error": "An error occurred. Please try again.",
+    "bookedWarning": "Some dates are already booked. Please check your selection.",
     "unavailable": "Already booked",
     "next": "Next",
     "back": "Back"
@@ -113,6 +114,7 @@
     "message": "Message",
     "send": "Send",
     "success": "Message sent! We will reply as soon as possible.",
+    "error": "An error occurred. Please try again.",
     "phone": "Phone",
     "owner": "Maria Verena Stubenböck"
   },

@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl';
 import Button from './Button';
 
 const ROOMS = [
-  { slug: 'einzelzimmer', label: 'Einzelzimmer', labelEn: 'Single Room' },
-  { slug: 'doppelzimmer', label: 'Doppelzimmer', labelEn: 'Double Room' },
-  { slug: 'mehrbettzimmer', label: 'Mehrbettzimmer', labelEn: 'Multi-bed Room' },
+  { slug: 'einzelzimmer' },
+  { slug: 'doppelzimmer' },
+  { slug: 'mehrbettzimmer' },
 ];
 
 interface BookedRange {
@@ -20,6 +20,7 @@ function toInputValue(d: Date): string {
 
 export default function BookingForm() {
   const t = useTranslations('booking');
+  const tRooms = useTranslations('rooms');
   const [step, setStep] = useState(1);
   const [roomSlug, setRoomSlug] = useState('doppelzimmer');
   const [checkIn, setCheckIn] = useState('');
@@ -106,7 +107,7 @@ export default function BookingForm() {
             <label className={labelClass}>{t('selectRoom')}</label>
             <select value={roomSlug} onChange={(e) => setRoomSlug(e.target.value)} className={inputClass}>
               {ROOMS.map((r) => (
-                <option key={r.slug} value={r.slug}>{r.label}</option>
+                <option key={r.slug} value={r.slug}>{tRooms(`${r.slug}.name`)}</option>
               ))}
             </select>
           </div>
@@ -155,7 +156,7 @@ export default function BookingForm() {
           </div>
           {bookedRanges.length > 0 && (
             <p className="text-xs text-amber-600">
-              Einige Daten sind bereits belegt. Bitte prüfen Sie Ihre Auswahl.
+              {t('bookedWarning')}
             </p>
           )}
           <div className="flex gap-3">

@@ -93,6 +93,7 @@
     "submit": "Anfrage senden",
     "success": "Ihre Anfrage wurde gesendet! Wir melden uns in Kürze.",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "bookedWarning": "Einige Daten sind bereits belegt. Bitte prüfen Sie Ihre Auswahl.",
     "unavailable": "Bereits belegt",
     "next": "Weiter",
     "back": "Zurück"
@@ -113,6 +114,7 @@
     "message": "Nachricht",
     "send": "Senden",
     "success": "Nachricht gesendet! Wir antworten so bald wie möglich.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "phone": "Telefon",
     "owner": "Maria Verena Stubenböck"
   },
