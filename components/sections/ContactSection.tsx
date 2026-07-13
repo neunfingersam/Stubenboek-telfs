@@ -4,6 +4,30 @@ import { useTranslations } from 'next-intl';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import Button from '@/components/ui/Button';
 
+function IconPhone() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-5 w-5 shrink-0">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 9h3" />
+    </svg>
+  );
+}
+
+function IconEnvelope() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-5 w-5 shrink-0">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+    </svg>
+  );
+}
+
+function IconCheckCircle() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="mx-auto mb-4 h-12 w-12 text-alpine">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
 export default function ContactSection() {
   const t = useTranslations('contact');
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -41,20 +65,17 @@ export default function ContactSection() {
               6410 Telfs, Tirol
             </p>
             <a href="tel:+4367683038325" className="flex items-center gap-2 hover:text-gold">
-              📞 +43 676 8303 8325
+              <IconPhone /> +43 676 8303 8325
             </a>
-            <a
-              href="mailto:info@stubenboeck-telfs.com"
-              className="flex items-center gap-2 hover:text-gold"
-            >
-              ✉️ info@stubenboeck-telfs.com
+            <a href="mailto:info@stubenboeck-telfs.com" className="flex items-center gap-2 hover:text-gold">
+              <IconEnvelope /> info@stubenboeck-telfs.com
             </a>
           </div>
         </div>
         <div>
           {status === 'success' ? (
             <div className="rounded-2xl bg-white p-8 text-center shadow-md">
-              <div className="mb-4 text-4xl">✅</div>
+              <IconCheckCircle />
               <p className="font-serif text-xl text-alpine">{t('success')}</p>
             </div>
           ) : (
@@ -70,9 +91,7 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  {t('email')}
-                </label>
+                <label className="mb-1 block text-sm font-medium text-gray-700">{t('email')}</label>
                 <input
                   type="email"
                   required
@@ -82,9 +101,7 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  {t('message')}
-                </label>
+                <label className="mb-1 block text-sm font-medium text-gray-700">{t('message')}</label>
                 <textarea
                   required
                   rows={4}
@@ -103,9 +120,7 @@ export default function ContactSection() {
                 {status === 'loading' ? '…' : t('send')}
               </Button>
               {status === 'error' && (
-                <p className="text-center text-sm text-red-600">
-                  {t('error')}
-                </p>
+                <p className="text-center text-sm text-red-600">{t('error')}</p>
               )}
             </form>
           )}
