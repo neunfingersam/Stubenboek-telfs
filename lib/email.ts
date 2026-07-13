@@ -1,7 +1,9 @@
 import { Resend } from 'resend';
 import { escapeHtml } from './escapeHtml';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY ?? 're_placeholder');
+}
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? 'info@stubenboeck-telfs.com'; // domain stays ASCII for email routing
 
@@ -31,7 +33,7 @@ export async function sendBookingRequestEmails(booking: {
   const safeRoomName = escapeHtml(booking.room.name);
 
   // Email to guest
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Haus Stubenböck <noreply@stubenboeck-telfs.com>',
     to: booking.guestEmail,
     subject: 'Ihre Buchungsanfrage — Haus Stubenböck',
@@ -53,7 +55,7 @@ export async function sendBookingRequestEmails(booking: {
   });
 
   // Email to admin
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Haus Stubenböck System <noreply@stubenboeck-telfs.com>',
     to: ADMIN_EMAIL,
     subject: `Neue Buchungsanfrage: ${booking.guestName} — ${booking.room.name}`,
@@ -93,7 +95,7 @@ export async function sendBookingConfirmedEmail(booking: {
   const safeGuestName = escapeHtml(booking.guestName);
   const safeRoomName = escapeHtml(booking.room.name);
 
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Haus Stubenböck <noreply@stubenboeck-telfs.com>',
     to: booking.guestEmail,
     subject: 'Buchung bestätigt — Haus Stubenböck',
@@ -125,7 +127,7 @@ export async function sendBookingRejectedEmail(booking: {
 }) {
   const safeGuestName = escapeHtml(booking.guestName);
 
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Haus Stubenböck <noreply@stubenboeck-telfs.com>',
     to: booking.guestEmail,
     subject: 'Buchungsanfrage — Haus Stubenböck',
