@@ -1,5 +1,135 @@
 {
-  "site": {
-    "name": "Haus Stubenböck"
+  "nav": {
+    "rooms": "Rooms",
+    "gallery": "Gallery",
+    "sustainability": "Sustainability",
+    "directions": "Directions",
+    "contact": "Contact",
+    "book": "Book Now"
+  },
+  "hero": {
+    "headline": "Welcome to Haus Stubenböck",
+    "subline": "Quiet yet central — Telfs, Tyrol",
+    "cta": "Rooms & Availability"
+  },
+  "welcome": {
+    "headline": "Your Home in Tyrol",
+    "text": "Haus Stubenböck is quietly and centrally located in Telfs, just 25 kilometres west of Innsbruck. Maria Verena Stubenböck and her family warmly welcome you to their family-run guesthouse.",
+    "badge1": "Family-run",
+    "badge2": "Sustainable",
+    "badge3": "Centrally located",
+    "rating": "4.76 out of 5 stars · 50 reviews"
+  },
+  "rooms": {
+    "headline": "Our Rooms",
+    "subline": "Comfortably furnished rooms for every need",
+    "einzelzimmer": {
+      "name": "Single Room",
+      "desc": "Perfect for solo travellers. Quiet location with everything you need.",
+      "features": ["1 person", "private bathroom", "WiFi", "parking"]
+    },
+    "doppelzimmer": {
+      "name": "Double Room",
+      "desc": "Cosy room for couples or two travellers with balcony access.",
+      "features": ["2 persons", "balcony", "WiFi", "parking"]
+    },
+    "mehrbettzimmer": {
+      "name": "Multi-bed Room",
+      "desc": "Ideal for groups or contractors. Shared kitchen included.",
+      "features": ["up to 4 persons", "shared kitchen", "WiFi", "parking"]
+    },
+    "from": "from",
+    "perNight": "/ night",
+    "perPerson": "/ person / night",
+    "checkAvailability": "Check Availability"
+  },
+  "pendler": {
+    "headline": "For Business Travellers & Contractors",
+    "subline": "Extended stays are warmly welcome",
+    "features": [
+      "Weekly & monthly rates available",
+      "Shared kitchen free of charge",
+      "Parking & covered bike storage",
+      "Fast WiFi throughout",
+      "Laundry room available",
+      "Quiet location — restful sleep"
+    ],
+    "cta": "Enquire Directly"
+  },
+  "amenities": {
+    "headline": "Amenities & Services",
+    "parking": "Parking",
+    "bike": "Bike Storage",
+    "kitchen": "Shared Kitchen",
+    "balcony": "Balcony",
+    "wifi": "Fast WiFi",
+    "breakfast": "Breakfast optional",
+    "welcomecard": "Welcome Card from 2 nights",
+    "pets": "Pets on request"
+  },
+  "gallery": {
+    "headline": "Impressions",
+    "subline": "A glimpse inside Haus Stubenböck"
+  },
+  "sustainability": {
+    "headline": "Sustainable, Organic & Family-run",
+    "text": "We operate consciously and sustainably. Our own fruit and vegetable garden provides seasonal produce, we source regional food, and handle resources with care.",
+    "quote": "There is no Planet B."
+  },
+  "booking": {
+    "headline": "Book a Room",
+    "subline": "Send a request — we confirm personally",
+    "step1": "Choose Room",
+    "step2": "Travel Dates",
+    "step3": "Your Details",
+    "selectRoom": "Select a room",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message (optional)",
+    "submit": "Send Request",
+    "success": "Your request was sent! We will get back to you shortly.",
+    "error": "An error occurred. Please try again.",
+    "unavailable": "Already booked",
+    "next": "Next",
+    "back": "Back"
+  },
+  "directions": {
+    "headline": "Directions",
+    "address": "Gießenweg 9, 6410 Telfs, Tyrol, Austria",
+    "bycar": "By Car",
+    "bycarText": "From Innsbruck via the A12 motorway towards Bregenz, exit Telfs. Approx. 25 minutes.",
+    "bytrain": "By Train & Bus",
+    "bytrainText": "Regular bus service from Innsbruck to Telfs (line 4140). From Telfs station approx. 10 minutes walk.",
+    "parking": "Parking available"
+  },
+  "contact": {
+    "headline": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "success": "Message sent! We will reply as soon as possible.",
+    "phone": "Phone",
+    "owner": "Maria Verena Stubenböck"
+  },
+  "footer": {
+    "tagline": "Family-run guesthouse in Telfs, Tyrol",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Haus Stubenböck. All rights reserved."
+  },
+  "confirm": {
+    "headline": "Booking Confirmed",
+    "text": "The booking has been successfully confirmed. The guest will receive a confirmation email.",
+    "alreadyHandled": "This booking has already been handled."
+  },
+  "reject": {
+    "headline": "Booking Rejected",
+    "text": "The booking has been rejected. The guest will receive a cancellation email.",
+    "alreadyHandled": "This booking has already been handled."
   }
 }

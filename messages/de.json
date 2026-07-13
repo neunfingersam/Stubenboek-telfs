@@ -1,5 +1,135 @@
 {
-  "site": {
-    "name": "Haus Stubenböck"
+  "nav": {
+    "rooms": "Zimmer",
+    "gallery": "Galerie",
+    "sustainability": "Nachhaltigkeit",
+    "directions": "Anreise",
+    "contact": "Kontakt",
+    "book": "Jetzt buchen"
+  },
+  "hero": {
+    "headline": "Herzlich Willkommen im Haus Stubenböck",
+    "subline": "Ruhig und zentral — Telfs, Tirol",
+    "cta": "Zimmer & Verfügbarkeit"
+  },
+  "welcome": {
+    "headline": "Ihr Zuhause in Tirol",
+    "text": "Das Haus Stubenböck liegt ruhig und dennoch zentral in Telfs, nur 25 Kilometer westlich von Innsbruck. Maria Verena Stubenböck und ihre Familie heißen Sie herzlich willkommen in ihrem familiengeführten Gästehaus mit Herz.",
+    "badge1": "Familiengeführt",
+    "badge2": "Nachhaltig",
+    "badge3": "Zentral gelegen",
+    "rating": "4.76 von 5 Sternen · 50 Bewertungen"
+  },
+  "rooms": {
+    "headline": "Unsere Zimmer",
+    "subline": "Komfortabel eingerichtete Zimmer für jeden Bedarf",
+    "einzelzimmer": {
+      "name": "Einzelzimmer",
+      "desc": "Perfekt für Alleinreisende. Ruhige Lage mit allem was Sie brauchen.",
+      "features": ["1 Person", "eigenes WC/Dusche", "WLAN", "Parkplatz"]
+    },
+    "doppelzimmer": {
+      "name": "Doppelzimmer",
+      "desc": "Gemütliches Zimmer für Paare oder zwei Reisende mit Balkonzugang.",
+      "features": ["2 Personen", "Balkon", "WLAN", "Parkplatz"]
+    },
+    "mehrbettzimmer": {
+      "name": "Mehrbettzimmer",
+      "desc": "Ideal für Gruppen oder Monteure. Gemeinschaftsküche inklusive.",
+      "features": ["bis 4 Personen", "Gemeinschaftsküche", "WLAN", "Parkplatz"]
+    },
+    "from": "ab",
+    "perNight": "/ Nacht",
+    "perPerson": "/ Person / Nacht",
+    "checkAvailability": "Verfügbarkeit prüfen"
+  },
+  "pendler": {
+    "headline": "Für Berufspendler & Monteure",
+    "subline": "Längere Aufenthalte sind herzlich willkommen",
+    "features": [
+      "Wochenmieten & Monatsmieten möglich",
+      "Gemeinschaftsküche kostenlos nutzbar",
+      "Parkplatz & überdachter Fahrradraum",
+      "Schnelles WLAN im gesamten Haus",
+      "Wäscheraum vorhanden",
+      "Ruhige Lage — erholsamer Schlaf"
+    ],
+    "cta": "Direkt anfragen"
+  },
+  "amenities": {
+    "headline": "Ausstattung & Services",
+    "parking": "Parkplatz",
+    "bike": "Fahrradraum",
+    "kitchen": "Gemeinschaftsküche",
+    "balcony": "Balkon",
+    "wifi": "Schnelles WLAN",
+    "breakfast": "Frühstück optional",
+    "welcomecard": "Welcome Card ab 2 Nächten",
+    "pets": "Haustiere auf Anfrage"
+  },
+  "gallery": {
+    "headline": "Eindrücke",
+    "subline": "Ein Blick ins Haus Stubenböck"
+  },
+  "sustainability": {
+    "headline": "Nachhaltig, biologisch & familiär",
+    "text": "Wir wirtschaften bewusst und nachhaltig. Unser eigener Obst- und Gemüsegarten liefert saisonale Produkte, wir setzen auf regionale Lebensmittel und gehen schonend mit Ressourcen um.",
+    "quote": "There is no Planet B."
+  },
+  "booking": {
+    "headline": "Zimmer buchen",
+    "subline": "Anfrage senden — wir bestätigen persönlich",
+    "step1": "Zimmer wählen",
+    "step2": "Reisedaten",
+    "step3": "Ihre Daten",
+    "selectRoom": "Zimmer wählen",
+    "checkIn": "Anreise",
+    "checkOut": "Abreise",
+    "guests": "Personen",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht (optional)",
+    "submit": "Anfrage senden",
+    "success": "Ihre Anfrage wurde gesendet! Wir melden uns in Kürze.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "unavailable": "Bereits belegt",
+    "next": "Weiter",
+    "back": "Zurück"
+  },
+  "directions": {
+    "headline": "Anreise",
+    "address": "Gießenweg 9, 6410 Telfs, Tirol, Österreich",
+    "bycar": "Mit dem Auto",
+    "bycarText": "Von Innsbruck über die A12 Richtung Bregenz, Abfahrt Telfs. Ca. 25 Minuten.",
+    "bytrain": "Mit Bahn & Bus",
+    "bytrainText": "Regelmäßige Busverbindung von Innsbruck nach Telfs (Linie 4140). Ab Telfs Bahnhof ca. 10 Minuten zu Fuß.",
+    "parking": "Parkplatz vorhanden"
+  },
+  "contact": {
+    "headline": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "success": "Nachricht gesendet! Wir antworten so bald wie möglich.",
+    "phone": "Telefon",
+    "owner": "Maria Verena Stubenböck"
+  },
+  "footer": {
+    "tagline": "Familiengeführtes Gästehaus in Telfs, Tirol",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "© 2026 Haus Stubenböck. Alle Rechte vorbehalten."
+  },
+  "confirm": {
+    "headline": "Buchung bestätigt",
+    "text": "Die Buchung wurde erfolgreich bestätigt. Der Gast erhält eine Bestätigungs-E-Mail.",
+    "alreadyHandled": "Diese Buchung wurde bereits bearbeitet."
+  },
+  "reject": {
+    "headline": "Buchung abgelehnt",
+    "text": "Die Buchung wurde abgelehnt. Der Gast erhält eine Absage-E-Mail.",
+    "alreadyHandled": "Diese Buchung wurde bereits bearbeitet."
   }
 }
