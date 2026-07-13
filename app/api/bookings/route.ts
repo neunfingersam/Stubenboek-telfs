@@ -34,8 +34,8 @@ export async function POST(request: NextRequest) {
     await sendBookingRequestEmails(booking);
 
     return NextResponse.json({ id: booking.id, status: booking.status });
-  } catch (err: any) {
-    if (err.message === 'Room not available for selected dates') {
+  } catch (err: unknown) {
+    if (err instanceof Error && err.message === 'Room not available for selected dates') {
       return NextResponse.json({ error: err.message }, { status: 409 });
     }
     console.error(err);

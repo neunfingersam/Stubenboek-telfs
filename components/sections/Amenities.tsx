@@ -27,6 +27,7 @@ export default function Amenities() {
             className="flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center shadow-sm"
           >
             <span className="text-3xl">{icon}</span>
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             <span className="text-sm font-medium text-alpine">{t(key as any)}</span>
           </div>
         ))}
