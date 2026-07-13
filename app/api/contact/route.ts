@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { escapeHtml } from '@/lib/escapeHtml';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY ?? 're_placeholder');
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? 'info@stubenboeck-telfs.com';
 
 export async function POST(request: NextRequest) {
