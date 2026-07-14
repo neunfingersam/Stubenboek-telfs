@@ -35,12 +35,20 @@ export default function Navigation() {
     { href: '#contact', label: t('contact') },
   ];
 
+  // Strip hash from URL on load so refreshing doesn't jump to a section
+  useEffect(() => {
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setOpen(false);
+    const id = href.replace('#', '');
     setTimeout(() => {
-      document.getElementById(href.replace('#', ''))?.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, open ? 300 : 0);
   };
 
   return (
@@ -67,6 +75,7 @@ export default function Navigation() {
               <a
                 key={l.href}
                 href={l.href}
+                onClick={(e) => handleLinkClick(e, l.href)}
                 className="text-sm font-medium text-white/80 transition hover:text-gold"
               >
                 {l.label}
