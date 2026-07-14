@@ -3,6 +3,7 @@
     "rooms": "Zimmer",
     "gallery": "Galerie",
     "sustainability": "Nachhaltigkeit",
+    "events": "Erlebnisse",
     "directions": "Anreise",
     "contact": "Kontakt",
     "book": "Jetzt buchen"
@@ -125,6 +126,35 @@
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "© 2026 Haus Stubenböck. Alle Rechte vorbehalten."
+  },
+  "events": {
+    "headline": "Erlebnisse rund um Telfs",
+    "subline": "Direkt vor der Tür — Natur, Kultur und Abenteuer in Tirol",
+    "hiking": {
+      "title": "Wandern & Bergsteigen",
+      "desc": "Das Mieminger Plateau und die umliegenden Gipfel wie der Hohe Munde bieten Touren für jedes Niveau. Der Inn-Radweg führt direkt durch Telfs."
+    },
+    "theater": {
+      "title": "Tiroler Volksschauspiele",
+      "desc": "Jedes Jahr im Sommer (Jul–Aug) finden in Telfs die renommierten Volksschauspiele statt — Open-Air-Theater mit Weltpremieren direkt vor Ort."
+    },
+    "skiing": {
+      "title": "Skigebiete in der Nähe",
+      "desc": "Axamer Lizum, Kühtai und Seefeld sind in 20–40 Minuten erreichbar. Perfekte Ausgangslage für Wintersport jeder Art."
+    },
+    "carnival": {
+      "title": "Schleicherlaufen",
+      "desc": "Alle fünf Jahre findet Telfs' berühmter Faschingsumzug statt — UNESCO-immaterielles Kulturerbe und eines der eindrucksvollsten Brauchtumsevents Tirols."
+    },
+    "cycling": {
+      "title": "Radfahren & Langlauf",
+      "desc": "Der Inn-Radweg ist direkt erreichbar. Im Winter bietet das Seefelder Plateau ausgedehnte Loipen für Langläufer und Schneeschuhwanderer."
+    },
+    "innsbruck": {
+      "title": "Innsbruck – 25 km entfernt",
+      "desc": "Die Landeshauptstadt Tirols mit Goldenem Dachl, Hofburg und Nordkettenbahn ist in rund 25 Minuten mit Auto oder Bus erreichbar."
+    },
+    "hint": "Gerne beraten wir Sie persönlich zu Ausflügen und Aktivitäten in der Region."
   },
   "confirm": {
     "headline": "Buchung bestätigt",

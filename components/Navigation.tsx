@@ -31,6 +31,7 @@ export default function Navigation() {
     { href: '#rooms', label: t('rooms') },
     { href: '#gallery', label: t('gallery') },
     { href: '#sustainability', label: t('sustainability') },
+    { href: '#events', label: t('events') },
     { href: '#directions', label: t('directions') },
     { href: '#contact', label: t('contact') },
   ];

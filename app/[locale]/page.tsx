@@ -7,6 +7,7 @@ import Amenities from '@/components/sections/Amenities';
 import Gallery from '@/components/sections/Gallery';
 import Sustainability from '@/components/sections/Sustainability';
 import BookingSection from '@/components/sections/BookingSection';
+import LocalEvents from '@/components/sections/LocalEvents';
 import Directions from '@/components/sections/Directions';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/sections/Footer';
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Gallery />
         <Sustainability />
         <BookingSection />
+        <LocalEvents />
         <Directions />
         <ContactSection />
       </main>

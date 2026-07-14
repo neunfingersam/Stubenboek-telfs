@@ -3,6 +3,7 @@
     "rooms": "Rooms",
     "gallery": "Gallery",
     "sustainability": "Sustainability",
+    "events": "Activities",
     "directions": "Directions",
     "contact": "Contact",
     "book": "Book Now"
@@ -125,6 +126,35 @@
     "imprint": "Imprint",
     "privacy": "Privacy Policy",
     "copyright": "© 2026 Haus Stubenböck. All rights reserved."
+  },
+  "events": {
+    "headline": "Things to Do Around Telfs",
+    "subline": "Right on your doorstep — nature, culture and adventure in Tyrol",
+    "hiking": {
+      "title": "Hiking & Mountaineering",
+      "desc": "The Mieming Plateau and surrounding peaks like the Hohe Munde offer trails for every level. The Inn Cycle Route runs directly through Telfs."
+    },
+    "theater": {
+      "title": "Tyrolean Folk Plays",
+      "desc": "Every summer (Jul–Aug) Telfs hosts the acclaimed Volksschauspiele — open-air theatre with world premieres right in town."
+    },
+    "skiing": {
+      "title": "Ski Resorts Nearby",
+      "desc": "Axamer Lizum, Kühtai and Seefeld are just 20–40 minutes away — a perfect base for all kinds of winter sports."
+    },
+    "carnival": {
+      "title": "Schleicherlaufen Carnival",
+      "desc": "Every five years Telfs holds its famous carnival procession — a UNESCO intangible cultural heritage and one of Tyrol's most spectacular traditions."
+    },
+    "cycling": {
+      "title": "Cycling & Cross-country Skiing",
+      "desc": "The Inn Cycle Route is easily accessible. In winter the Seefeld Plateau offers extensive cross-country ski trails and snowshoe routes."
+    },
+    "innsbruck": {
+      "title": "Innsbruck — 25 km Away",
+      "desc": "Tyrol's capital, with the Golden Roof, Hofburg palace and Nordkette cable car, is just 25 minutes by car or bus."
+    },
+    "hint": "We are happy to give you personal tips on excursions and activities in the region."
   },
   "confirm": {
     "headline": "Booking Confirmed",
