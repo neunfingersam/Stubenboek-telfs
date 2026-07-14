@@ -143,14 +143,14 @@
       "desc": "50. Jubiläum des renommierten Barockfestivals. 30 Spielorte, Opern, Kammerkonzerte und Weltklasse-Ensembles."
     },
     "jazz": {
-      "title": "Tsombanis Jazzfestival",
+      "title": "Outreach Music Festival Schwaz",
       "location": "Schwaz, ~45 km",
-      "desc": "Hochkarätiger Jazz unter freiem Himmel im mittelalterlichen Schwaz — eine der schönsten Festivalkulissen Tirols."
+      "desc": "Jazzfestival von Trompeter Franz Hackl — hochkarätiger Jazz unter freiem Himmel im mittelalterlichen Schwaz."
     },
     "kitzbuhel": {
       "title": "Musikfestival Kitzbühel",
       "location": "Kitzbühel, ~80 km",
-      "desc": "Open-Air-Konzert im Tennisstation mit Kulissenblick auf die Tiroler Berge. Zwei Abende, internationales Programm."
+      "desc": "Andreas Gabalier & Friends — Open-Air im Tennisstadion mit Bergpanorama. Zwei Abende, ausverkaufte Atmosphäre."
     },
     "hiking": {
       "title": "Wandern & Bergsteigen",
@@ -168,6 +168,7 @@
       "title": "Innsbruck – 25 km",
       "desc": "Goldenes Dachl, Hofburg, Nordkettenbahn und lebendige Altstadt — 25 Min. mit Auto oder Bus."
     },
+    "more": "Mehr erfahren",
     "hint": "Gerne beraten wir Sie persönlich zu Tickets, Ausflügen und Aktivitäten in der Region."
   },
   "confirm": {

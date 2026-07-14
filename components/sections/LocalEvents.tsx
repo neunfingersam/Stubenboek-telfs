@@ -64,13 +64,14 @@ type EventCard = {
   icon: React.ReactNode;
   badge: string;
   color: string;
+  url: string;
 };
 
 const EVENTS: EventCard[] = [
-  { key: 'volksschauspiele', icon: <IconMasks />, badge: '4. Jul – 29. Aug 2026', color: 'bg-alpine text-white' },
-  { key: 'festwochen', icon: <IconMusic />, badge: '24. Jul – 30. Aug 2026', color: 'bg-gold text-white' },
-  { key: 'jazz', icon: <IconMusic />, badge: '30. Jul – 15. Aug 2026', color: 'bg-stone-700 text-white' },
-  { key: 'kitzbuhel', icon: <IconStar />, badge: '21. – 22. Aug 2026', color: 'bg-alpine text-white' },
+  { key: 'volksschauspiele', icon: <IconMasks />, badge: '4. Jul – 29. Aug 2026', color: 'bg-alpine text-white', url: 'https://www.volksschauspiele.at/' },
+  { key: 'festwochen', icon: <IconMusic />, badge: '24. Jul – 30. Aug 2026', color: 'bg-gold text-white', url: 'https://www.altemusik.at/' },
+  { key: 'jazz', icon: <IconMusic />, badge: '30. Jul – 15. Aug 2026', color: 'bg-stone-700 text-white', url: 'https://www.tyrol.com/activities/events/all-events/outreach-music-festival' },
+  { key: 'kitzbuhel', icon: <IconStar />, badge: '21. – 22. Aug 2026', color: 'bg-alpine text-white', url: 'https://kitzmusik.at/' },
 ];
 
 const ACTIVITY_ICONS: Record<string, React.ReactNode> = {
@@ -100,13 +101,16 @@ export default function LocalEvents() {
       </h3>
       <div className="mb-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {EVENTS.map((ev, i) => (
-          <motion.div
+          <motion.a
             key={ev.key}
+            href={ev.url}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.4, delay: i * 0.08, ease: 'easeOut' }}
-            className="flex flex-col rounded-2xl border border-stone-200 bg-white shadow-sm overflow-hidden"
+            className="flex flex-col rounded-2xl border border-stone-200 bg-white shadow-sm overflow-hidden transition hover:shadow-md hover:-translate-y-0.5"
           >
             {/* Date badge */}
             <div className={`flex items-center gap-2 px-4 py-2.5 text-xs font-bold ${ev.color}`}>
@@ -118,8 +122,9 @@ export default function LocalEvents() {
               <p className="mb-1 font-semibold text-alpine leading-snug">{t(`${ev.key}.title`)}</p>
               <p className="text-xs leading-relaxed text-stone-400 mt-1">{t(`${ev.key}.location`)}</p>
               <p className="mt-2 text-sm leading-relaxed text-stone-500 flex-1">{t(`${ev.key}.desc`)}</p>
+              <p className="mt-3 text-xs font-medium text-gold">{t('more')} →</p>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
 

@@ -143,14 +143,14 @@
       "desc": "50th anniversary of the acclaimed Baroque festival. 30 venues, operas, chamber concerts and world-class ensembles."
     },
     "jazz": {
-      "title": "Tsombanis Jazz Festival",
+      "title": "Outreach Music Festival Schwaz",
       "location": "Schwaz, ~45 km",
-      "desc": "Top-class jazz in the open air in medieval Schwaz — one of the most beautiful festival settings in Tyrol."
+      "desc": "Jazz festival by trumpeter Franz Hackl — top-class jazz in the open air in medieval Schwaz."
     },
     "kitzbuhel": {
       "title": "Musikfestival Kitzbühel",
       "location": "Kitzbühel, ~80 km",
-      "desc": "Open-air concert in the tennis stadium with stunning views of the Tyrolean Alps. Two evenings, international programme."
+      "desc": "Andreas Gabalier & Friends — open-air at the tennis stadium with mountain panorama. Two sold-out evenings."
     },
     "hiking": {
       "title": "Hiking & Mountaineering",
@@ -168,6 +168,7 @@
       "title": "Innsbruck — 25 km",
       "desc": "Golden Roof, Hofburg, Nordkette cable car and vibrant old town — 25 min by car or bus."
     },
+    "more": "Learn more",
     "hint": "We are happy to give you personal tips on tickets, excursions and activities in the region."
   },
   "confirm": {
