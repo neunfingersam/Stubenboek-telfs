@@ -128,33 +128,47 @@
     "copyright": "© 2026 Haus Stubenböck. Alle Rechte vorbehalten."
   },
   "events": {
-    "headline": "Erlebnisse rund um Telfs",
-    "subline": "Direkt vor der Tür — Natur, Kultur und Abenteuer in Tirol",
+    "headline": "Events & Erlebnisse",
+    "subline": "Was diese Sommer in und rund um Telfs los ist",
+    "eventsLabel": "Konzerte & Festivals 2026",
+    "activitiesLabel": "Ausflüge & Aktivitäten",
+    "volksschauspiele": {
+      "title": "Tiroler Volksschauspiele – „Feuernacht"",
+      "location": "Telfs (direkt vor Ort)",
+      "desc": "Weltpremiere von Felix Mitterers Südtirol-Epos. Herbert Pixner & Band spielen live bei allen 21 Vorstellungen."
+    },
+    "festwochen": {
+      "title": "Innsbrucker Festwochen der Alten Musik",
+      "location": "Innsbruck, ~25 km",
+      "desc": "50. Jubiläum des renommierten Barockfestivals. 30 Spielorte, Opern, Kammerkonzerte und Weltklasse-Ensembles."
+    },
+    "jazz": {
+      "title": "Tsombanis Jazzfestival",
+      "location": "Schwaz, ~45 km",
+      "desc": "Hochkarätiger Jazz unter freiem Himmel im mittelalterlichen Schwaz — eine der schönsten Festivalkulissen Tirols."
+    },
+    "kitzbuhel": {
+      "title": "Musikfestival Kitzbühel",
+      "location": "Kitzbühel, ~80 km",
+      "desc": "Open-Air-Konzert im Tennisstation mit Kulissenblick auf die Tiroler Berge. Zwei Abende, internationales Programm."
+    },
     "hiking": {
       "title": "Wandern & Bergsteigen",
-      "desc": "Das Mieminger Plateau und die umliegenden Gipfel wie der Hohe Munde bieten Touren für jedes Niveau. Der Inn-Radweg führt direkt durch Telfs."
-    },
-    "theater": {
-      "title": "Tiroler Volksschauspiele",
-      "desc": "Jedes Jahr im Sommer (Jul–Aug) finden in Telfs die renommierten Volksschauspiele statt — Open-Air-Theater mit Weltpremieren direkt vor Ort."
+      "desc": "Mieminger Plateau, Hohe Munde und Seefelder Plateau — Touren für jedes Niveau direkt ab Telfs."
     },
     "skiing": {
       "title": "Skigebiete in der Nähe",
-      "desc": "Axamer Lizum, Kühtai und Seefeld sind in 20–40 Minuten erreichbar. Perfekte Ausgangslage für Wintersport jeder Art."
-    },
-    "carnival": {
-      "title": "Schleicherlaufen",
-      "desc": "Alle fünf Jahre findet Telfs' berühmter Faschingsumzug statt — UNESCO-immaterielles Kulturerbe und eines der eindrucksvollsten Brauchtumsevents Tirols."
+      "desc": "Axamer Lizum, Kühtai und Seefeld in 20–40 Min. erreichbar — Wintersport für jeden Geschmack."
     },
     "cycling": {
       "title": "Radfahren & Langlauf",
-      "desc": "Der Inn-Radweg ist direkt erreichbar. Im Winter bietet das Seefelder Plateau ausgedehnte Loipen für Langläufer und Schneeschuhwanderer."
+      "desc": "Der Inn-Radweg führt direkt durch Telfs. Im Winter: Loipen am Seefelder Plateau."
     },
     "innsbruck": {
-      "title": "Innsbruck – 25 km entfernt",
-      "desc": "Die Landeshauptstadt Tirols mit Goldenem Dachl, Hofburg und Nordkettenbahn ist in rund 25 Minuten mit Auto oder Bus erreichbar."
+      "title": "Innsbruck – 25 km",
+      "desc": "Goldenes Dachl, Hofburg, Nordkettenbahn und lebendige Altstadt — 25 Min. mit Auto oder Bus."
     },
-    "hint": "Gerne beraten wir Sie persönlich zu Ausflügen und Aktivitäten in der Region."
+    "hint": "Gerne beraten wir Sie persönlich zu Tickets, Ausflügen und Aktivitäten in der Region."
   },
   "confirm": {
     "headline": "Buchung bestätigt",

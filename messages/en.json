@@ -128,33 +128,47 @@
     "copyright": "© 2026 Haus Stubenböck. All rights reserved."
   },
   "events": {
-    "headline": "Things to Do Around Telfs",
-    "subline": "Right on your doorstep — nature, culture and adventure in Tyrol",
+    "headline": "Events & Activities",
+    "subline": "What's on this summer in and around Telfs",
+    "eventsLabel": "Concerts & Festivals 2026",
+    "activitiesLabel": "Day Trips & Activities",
+    "volksschauspiele": {
+      "title": "Tyrolean Folk Plays – "Feuernacht"",
+      "location": "Telfs (right here)",
+      "desc": "World premiere of Felix Mitterer's South Tyrol epic. Herbert Pixner & Band perform live at all 21 shows."
+    },
+    "festwochen": {
+      "title": "Innsbruck Festival of Early Music",
+      "location": "Innsbruck, ~25 km",
+      "desc": "50th anniversary of the acclaimed Baroque festival. 30 venues, operas, chamber concerts and world-class ensembles."
+    },
+    "jazz": {
+      "title": "Tsombanis Jazz Festival",
+      "location": "Schwaz, ~45 km",
+      "desc": "Top-class jazz in the open air in medieval Schwaz — one of the most beautiful festival settings in Tyrol."
+    },
+    "kitzbuhel": {
+      "title": "Musikfestival Kitzbühel",
+      "location": "Kitzbühel, ~80 km",
+      "desc": "Open-air concert in the tennis stadium with stunning views of the Tyrolean Alps. Two evenings, international programme."
+    },
     "hiking": {
       "title": "Hiking & Mountaineering",
-      "desc": "The Mieming Plateau and surrounding peaks like the Hohe Munde offer trails for every level. The Inn Cycle Route runs directly through Telfs."
-    },
-    "theater": {
-      "title": "Tyrolean Folk Plays",
-      "desc": "Every summer (Jul–Aug) Telfs hosts the acclaimed Volksschauspiele — open-air theatre with world premieres right in town."
+      "desc": "Mieming Plateau, Hohe Munde and Seefeld Plateau — trails for every level, starting right from Telfs."
     },
     "skiing": {
       "title": "Ski Resorts Nearby",
-      "desc": "Axamer Lizum, Kühtai and Seefeld are just 20–40 minutes away — a perfect base for all kinds of winter sports."
-    },
-    "carnival": {
-      "title": "Schleicherlaufen Carnival",
-      "desc": "Every five years Telfs holds its famous carnival procession — a UNESCO intangible cultural heritage and one of Tyrol's most spectacular traditions."
+      "desc": "Axamer Lizum, Kühtai and Seefeld 20–40 min away — winter sports for every taste."
     },
     "cycling": {
       "title": "Cycling & Cross-country Skiing",
-      "desc": "The Inn Cycle Route is easily accessible. In winter the Seefeld Plateau offers extensive cross-country ski trails and snowshoe routes."
+      "desc": "The Inn Cycle Route runs right through Telfs. In winter: cross-country trails on the Seefeld Plateau."
     },
     "innsbruck": {
-      "title": "Innsbruck — 25 km Away",
-      "desc": "Tyrol's capital, with the Golden Roof, Hofburg palace and Nordkette cable car, is just 25 minutes by car or bus."
+      "title": "Innsbruck — 25 km",
+      "desc": "Golden Roof, Hofburg, Nordkette cable car and vibrant old town — 25 min by car or bus."
     },
-    "hint": "We are happy to give you personal tips on excursions and activities in the region."
+    "hint": "We are happy to give you personal tips on tickets, excursions and activities in the region."
   },
   "confirm": {
     "headline": "Booking Confirmed",
